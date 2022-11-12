@@ -24,7 +24,7 @@ const Hamburger = ({
   onPress,
   menuOpen,
 }: {
-  onPress: Function;
+  onPress(): void;
   menuOpen: boolean;
 }) => {
   const translateY = useSharedValue(0);
@@ -106,7 +106,15 @@ const Hamburger = ({
   );
 };
 
-const Button = ({title, onPress, selected}) => {
+const Button = ({
+  title,
+  onPress,
+  selected,
+}: {
+  title: string;
+  onPress(): void;
+  selected: boolean;
+}) => {
   return (
     <TouchableOpacity
       onPress={onPress}
@@ -258,7 +266,7 @@ const Drawer = () => {
     });
   };
 
-  const openMenu = () => {
+  const changeMenuState = () => {
     if (isOpen) {
       animateMenu(CURRENT_CARD_TRANSLATE_X, 400);
       setIsOpen(false);
@@ -322,7 +330,7 @@ const Drawer = () => {
         />
       </Animated.View>
 
-      <Hamburger onPress={openMenu} menuOpen={isOpen} />
+      <Hamburger onPress={changeMenuState} menuOpen={isOpen} />
     </View>
   );
 };
