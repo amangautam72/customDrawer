@@ -1,3 +1,7 @@
+Thanks for landing here, I am glad that you took out some time to check this out. It takes time and effort to create these projects, If you really like my work and want me to keep making such projects, you can consider buying me a coffee. Thank you again!
+
+https://www.buymeacoffee.com/amangautam72
+
 # customDrawer
 
 A simple yet beautiful animated drawer.
